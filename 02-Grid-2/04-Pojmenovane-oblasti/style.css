@@ -18,3 +18,76 @@ body {
 
 /* ---------------------------------------------------- */
 
+.hlavicka {
+	grid-area: hlavicka;
+}
+
+.obsah {
+	grid-area: obsah;
+}
+
+.menu {
+	grid-area: menu;
+}
+
+.cesky1 {
+	grid-area: cesky1;
+}
+
+.cesky2 {
+	grid-area: cesky2;
+}
+
+.paticka {
+	grid-area: paticka;
+}
+
+.kontejner {
+	display: grid;
+	gap: 20px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 200px repeat(3, auto) 100px;
+	grid-template-areas: 
+	"hlavicka hlavicka" 
+	"obsah obsah"
+	"menu menu" 
+	"cesky1 cesky2" 
+	"paticka paticka";
+	
+}
+
+@media screen and (min-width: 760px) {
+	
+	
+	.kontejner {
+		display: grid;
+		gap: 20px;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 200px auto auto 100px;
+		grid-template-areas: 
+		"hlavicka hlavicka hlavicka" 
+		"menu obsah obsah"
+		"menu cesky1 cesky2" 
+		"paticka  paticka";
+	}
+	
+}
+
+
+@media screen and (min-width: 1000px) {
+	
+	.kontejner {
+		display: grid;
+		grid-template-columns: 200px 1fr 250px;
+		grid-template-rows: 200px auto auto 100px;
+		grid-template-areas: 
+		"hlavicka hlavicka hlavicka" 
+		"menu obsah cesky1" 
+		"menu obsah cesky2" 
+		"paticka paticka paticka";
+		gap: 20px;
+	}
+
+
+}
+
