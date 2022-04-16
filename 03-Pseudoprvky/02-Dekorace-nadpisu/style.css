@@ -4,6 +4,62 @@ html { box-sizing: border-box; }
 
 body {
 	font: 16px/1.5 sans-serif;
+	margin: 50px;
 }
 
 /*************************************************/
+
+.hlavni::after {
+	content: "";
+	display: block;
+	width: 200px;
+	height: 3px;
+	background-image: linear-gradient(to right, magenta, cyan);
+	margin-top: 10px;
+	margin-left: -50px;
+}
+
+.prvni {
+	text-align: center;
+}
+
+.prvni::before {
+	content: "";
+	display: block;
+	height: 15px;
+	background-image: url(images/flourish-top.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.prvni::after {
+	content: "";
+	display: block;
+	height: 15px;
+	background-image: url(images/flourish-bottom.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.treti {
+	position: relative;
+}
+
+.treti::before {
+	content: "";
+	display: block;
+	width: 100px;
+	height: 100px;
+	background-image: linear-gradient(to top right, yellow, orange);
+	position: absolute;
+	top: -16px;
+	left: -25px;
+
+	transform: rotate(45deg);
+	z-index: -999;
+}
+
+
+

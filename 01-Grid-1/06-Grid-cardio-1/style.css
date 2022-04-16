@@ -47,6 +47,8 @@ html { box-sizing: border-box;}
 
 .nabidka1 {
 	background-color: #d63031;
+	grid-column: 1 / 2;
+	grid-row: 3 / 4;
 }
 
 .nabidka2 {
